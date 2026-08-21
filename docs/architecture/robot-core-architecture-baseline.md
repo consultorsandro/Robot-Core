@@ -736,8 +736,18 @@ Architecture sections completed:
 - 3.6 Physical Project Structure
 - 3.7 Physical Structure Review
 - 3.8 Project Structure Implementation
+- 3.9 Architecture ↔ Physical Structure
 
-The physical project structure has been implemented and reviewed.
+The physical project structure has been implemented and reviewed
+against the architectural baseline.
+
+The current physical structure is consistent with the defined
+Application, Robot Core, public interface, testing, and documentation
+boundaries.
+
+Concrete infrastructure and subsystem implementations remain
+intentionally deferred until they are justified by the implementation
+roadmap.
 
 Current project structure:
 
