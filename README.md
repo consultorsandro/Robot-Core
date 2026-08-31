@@ -9,12 +9,15 @@ This project is part of my long-term development roadmap toward becoming a Robot
 **Version:** 0.1.0  
 **Status:** Initial development
 
-The current version establishes the initial CMake-based C++ project structure and validates the development toolchain.
+The current version establishes the initial CMake-based project structure and implements the first domain type, `Length`.
 
 ## Current Features
 
 - C++20 project configuration
 - CMake-based build system
+- `robot_core` static library
+- Validated `Length` domain type
+- GoogleTest unit tests registered with CTest
 - Microsoft Visual C++ compiler support
 - Initial executable application
 - Git version control
@@ -37,24 +40,53 @@ Create a build directory:
 ```text
 mkdir build
 cd build
+```
 
-## Configure the project:
+Configure the project:
+
+```text
 cmake ..
+```
 
-## Build the project:
+Build the project:
+
+```text
 cmake --build . --config Debug
+```
 
-## Run the aplication
-Debug\robot_core.exe
+Run the application:
 
-## Projetc Structure
+```text
+Debug\robot_core_app.exe
+```
+
+Run the tests:
+
+```text
+ctest -C Debug --output-on-failure
+```
+
+## Project Structure
+
+```text
 robot-core/
 ├── CMakeLists.txt
 ├── README.md
 ├── .gitignore
-├── src/
+├── app/
 │   └── main.cpp
-└── build/
+├── include/
+│   └── robot_core/
+│       └── length.hpp
+├── src/
+│   └── length.cpp
+├── tests/
+│   └── length_test.cpp
+└── docs/
+    └── architecture/
+        ├── robot-core-architecture-baseline.md
+        └── robot-core-architecture-baseline-v1.1.md
+```
 
 The build/ directory is generated locally and is intentionally excluded from version control.
 
