@@ -9,7 +9,7 @@ This project is part of my long-term development roadmap toward becoming a Robot
 **Version:** 0.1.0  
 **Status:** Initial development
 
-The current version establishes the initial CMake-based project structure and implements the `Length` and `Coordinate` domain types.
+The current version establishes the initial CMake-based project structure and implements the `Length`, `Coordinate`, and `Position` domain types.
 
 ## Current Features
 
@@ -18,6 +18,7 @@ The current version establishes the initial CMake-based project structure and im
 - `robot_core` static library
 - Validated `Length` domain type
 - Validated signed spatial `Coordinate` domain type
+- Three-dimensional Cartesian `Position` domain type composed of three Coordinates
 - GoogleTest unit tests registered with CTest
 - Microsoft Visual C++ compiler support
 - Initial executable application
@@ -79,13 +80,16 @@ robot-core/
 ├── include/
 │   └── robot_core/
 │       ├── coordinate.hpp
-│       └── length.hpp
+│       ├── length.hpp
+│       └── position.hpp
 ├── src/
 │   ├── coordinate.cpp
-│   └── length.cpp
+│   ├── length.cpp
+│   └── position.cpp
 ├── tests/
 │   ├── coordinate_test.cpp
-│   └── length_test.cpp
+│   ├── length_test.cpp
+│   └── position_test.cpp
 └── docs/
     └── architecture/
         ├── robot-core-architecture-baseline.md
