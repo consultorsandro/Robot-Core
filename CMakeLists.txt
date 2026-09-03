@@ -12,6 +12,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(robot_core STATIC
     src/length.cpp
+    src/coordinate.cpp
 )
 target_include_directories(robot_core PUBLIC
     "${CMAKE_CURRENT_SOURCE_DIR}/include"
@@ -43,6 +44,7 @@ if(BUILD_TESTING)
 
     add_executable(robot_core_tests
         tests/length_test.cpp
+        tests/coordinate_test.cpp
     )
     target_link_libraries(robot_core_tests PRIVATE robot_core GTest::gtest_main)
 
